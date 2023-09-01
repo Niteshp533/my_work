@@ -4,27 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace p2
+namespace prac3
 {
     class Program
-    {   
-        public void Add(int a, int b)
+    {
+        public void Area(int r)
         {
-            int c = a + b;
-            Console.WriteLine(" The sum of two given integers is {0}", c);
+            int b = r * r;
+            double a;
+            a = 3.14 * b;
+            Console.WriteLine("Area of Circle having radius {0} is {1}", r, a);
+        }
+        public void circ(int r)
+        {
+            int b = 2 * r;
+            double a = 3.14 * b;
+            Console.WriteLine("Circumference of Circle having radius {0} is {1}", r, a);
+
         }
         static void Main(string[] args)
         {
-            int a;
-            int b;
-            Console.WriteLine("Enter Two integer : ");
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
+            int r;
+            Console.Write(" Enter the radius of circle : ");
+            r = Convert.ToInt32(Console.ReadLine());
             Program obj = new Program();
-            obj.Add(a, b);
+            obj.Area(r);
+            obj.circ(r);
             Console.ReadKey();
-
         }
-    
     }
 }
